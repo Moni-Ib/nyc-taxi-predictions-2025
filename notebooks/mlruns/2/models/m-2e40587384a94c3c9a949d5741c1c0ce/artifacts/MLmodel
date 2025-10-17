@@ -1,0 +1,29 @@
+artifact_path: file:///c:/Users/cesar/Documents/5TO SEMESTRE ITESO/PROYECTO CIENCIA
+  DATOS/nyc-taxi-predictions-2025/notebooks/mlruns/2/models/m-2e40587384a94c3c9a949d5741c1c0ce/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.11.5
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.7.2
+is_signature_from_type_hint: false
+mlflow_version: 3.4.0
+model_id: m-2e40587384a94c3c9a949d5741c1c0ce
+model_size_bytes: 11754691
+model_uuid: m-2e40587384a94c3c9a949d5741c1c0ce
+prompts: null
+run_id: 442369d96b214a04a3933d0f90080fa7
+signature:
+  inputs: '[{"type": "tensor", "tensor-spec": {"dtype": "float64", "shape": [-1, 4159]}}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "float64", "shape": [-1]}}]'
+  params: null
+type_hint_from_example: false
+utc_time_created: '2025-10-17 02:30:29.914446'
