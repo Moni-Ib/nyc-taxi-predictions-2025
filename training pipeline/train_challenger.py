@@ -236,18 +236,12 @@ def challenger_vs_champion(registered_model: str = "workspace.default.nyc-taxi-m
     df_train = read_dataframe(train_path)
     df_val = read_dataframe(val_path)
 
-
     X_train, X_val, y_train, y_val, dv = build_feature_matrix(df_train, df_val)
 
-
     gb_info = tune_and_train_gb(X_train, X_val, y_train, y_val, dv)
-
-
     rf_info = tune_and_train_rf(X_train, X_val, y_train, y_val, dv, wait_for=[gb_info])
 
-    
     registered = register_best_as_challenger([gb_info, rf_info], registered_model, wait_for=[gb_info, rf_info])
-
 
     promotion_result = evaluate_and_promote(registered_model, data_march, registered, wait_for=[registered])
 
